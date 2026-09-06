@@ -1051,6 +1051,14 @@ function ApiKeyScreen({ onKey }) {
                      padding:"12px", fontSize:14, fontWeight:700, cursor: testing || !val.trim() ? "not-allowed" : "pointer" }}>
             {testing ? "Verifying..." : "Enter Course →"}
           </button>
+
+          <button onClick={() => onKey("sk-ant-skipped")}
+            style={{ marginTop:10, width:"100%", background: "transparent",
+                     color: K.mut, border:`1px solid ${K.brd}`, borderRadius:8,
+                     padding:"12px", fontSize:14, fontWeight:700, cursor: "pointer" }}>
+            Skip Without Key
+          </button>
+          
           <div style={{ marginTop:20, padding:14, background:K.fnt,
                         borderRadius:8, border:`1px solid ${K.brd}` }}>
             <div style={{ fontSize:11, fontWeight:700, color:"#3B7EF5", marginBottom:6 }}>
