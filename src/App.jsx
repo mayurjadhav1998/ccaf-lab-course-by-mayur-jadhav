@@ -468,9 +468,9 @@ Return ONLY this JSON:
         code:`# GitHub Actions — complete CI review pipeline
 - name: AI Code Review
   env:
-    ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    ANTHROPIC_API_KEY: \${{ secrets.ANTHROPIC_API_KEY }}
   run: |
-    DIFF=$(git diff origin/${{ github.base_ref }}...HEAD -- '*.py')
+    DIFF=$(git diff origin/\${{ github.base_ref }}...HEAD -- '*.py')
     # -p is REQUIRED — without it, pipeline hangs waiting for human
     claude -p \
       --output-format json \
