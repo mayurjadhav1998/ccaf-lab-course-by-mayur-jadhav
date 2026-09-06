@@ -300,7 +300,7 @@ result = response.content[0].input  # {"query": "shoes"}`},
     "database": {
       "command": "python",
       "args": ["-m", "company_mcp.server"],
-      "env": { "DB_URL": "${DB_URL}" }
+      "env": { "DB_URL": "\${DB_URL}" }
     },
     "remote-search": {
       "url": "https://mcp.search.internal/sse",
